@@ -1,1 +1,47 @@
 # arcadia-CCF-JEGO
+# cloner le repo sur votre disque local 
+#
+# Commande cli : git clone https://github.com/GuillaumeJego/arcadia-CCF-JEGO.git
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
