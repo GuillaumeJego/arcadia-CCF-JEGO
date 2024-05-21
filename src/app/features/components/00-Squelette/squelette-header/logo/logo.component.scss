@@ -1,0 +1,16 @@
+.main{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: -18vh;
+}
+.main:hover{
+    top: 10px
+}
+
+img{
+    width: 80%;
+}

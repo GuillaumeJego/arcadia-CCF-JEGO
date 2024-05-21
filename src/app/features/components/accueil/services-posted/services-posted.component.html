@@ -1,0 +1,21 @@
+<div class="main">
+    <div class="left">
+        <!-- image css  -->
+    </div>
+    <div class="right">
+        <h1>Nos services</h1>
+        <div class="container">
+            <div 
+            class="service" 
+            *ngFor="let service of services"
+            >
+                <h2> {{ service.nom }} </h2>
+
+                <span class="serviceText">
+                    {{ service.description }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+  

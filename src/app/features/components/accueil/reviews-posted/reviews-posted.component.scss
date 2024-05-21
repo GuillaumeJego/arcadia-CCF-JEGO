@@ -1,0 +1,74 @@
+@import '../../../../../style/colorPalette.scss';
+
+.avi{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    background-color: $color_level-01;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.aviText{
+    padding: 10px;
+}
+
+button{
+    padding: 10px;
+    background-color: $color_level-06;
+    border-radius: 10px;
+    box-shadow: none;
+    color: $color_level-05;
+    font-size: 1.5rem;
+}
+
+.bouttonRedirection{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;    
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2{
+    text-align: center;
+}
+
+.left{
+    
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: $color_level-04;
+    color: $color_level-05;
+    font-size: 1.5rem;
+}
+
+.right{
+    display: flex;
+    width: 20%;
+    background-image: url('../../../../../assets/Images/background/backgroundAvis.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
