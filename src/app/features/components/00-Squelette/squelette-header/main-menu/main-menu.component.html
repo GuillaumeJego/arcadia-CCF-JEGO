@@ -1,0 +1,10 @@
+<div class="main">
+  <div class="logoRedirect" *ngFor="let item of menuItems">
+    <a [href]="item.link">
+      <div class="image-container">
+        <img [src]="isActive(item.link) ? item.activeImageUrl : item.imageUrl" [alt]="item.text">
+        <span class="image-text">{{ item.text }}</span>
+      </div>
+    </a>
+  </div>
+</div>
