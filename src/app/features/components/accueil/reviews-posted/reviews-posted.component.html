@@ -1,0 +1,22 @@
+<div class="main">
+    <div class="left">
+        <div class="bouttonRedirection">
+            <button >Donnez nous votre avis</button>
+        </div>
+        <div class="container">
+            <div 
+            class="avi" 
+            *ngFor="let avi of avis"
+            >
+                <h2> {{ avi.pseudo }} </h2>
+
+                <span class="aviText">
+                    {{ avi.commentaire }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <!-- image css  -->
+    </div>
+</div>

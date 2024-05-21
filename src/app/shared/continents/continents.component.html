@@ -1,0 +1,25 @@
+<div class="main">
+    <h1>Découvrez les habitats des animaux du Zoo</h1>
+    <div class="container">
+        <div 
+            class="continent" 
+            *ngFor="let continent of continents"
+        >
+        <a 
+            class="image-text" 
+            [href]="continent.link"
+        >
+            <div class="image-container">
+                <img 
+                    [src]="continent.imageUrl" 
+                    [alt]="continent.text"
+                >
+            </div>
+            <span class="">
+                {{ continent.text }}
+            </span>
+        </a>
+        </div>
+    </div>
+</div>
+  

@@ -1,0 +1,21 @@
+<!-- src/app/features/components/accueil/presentation/presentation.component.html -->
+<div class="main">
+    <div class="left">
+        <!-- image css  -->
+    </div>
+    <div class="right">
+        <h1>Le zoo Arcadia c’est ...</h1>
+        <div class="container">
+            <div 
+            class="description" 
+            *ngFor="let description of descriptions"
+            >
+                <h2> {{ description.title }} </h2>
+
+                <span class="descriptionText">
+                    {{ description.description }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
