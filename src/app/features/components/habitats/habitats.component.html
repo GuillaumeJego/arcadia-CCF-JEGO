@@ -47,21 +47,52 @@
 <!-- Permet d'ajouter un petit formulairee pour ajouter les cartes des habitats -->    
     <!-- <form (ngSubmit)="onSubmit()">
         <label for="nom">Nom:</label>
-        <input type="text" id="nom" [(ngModel)]="habitat.nom" name="nom" required>
+        <input 
+            type="text" 
+            id="nom" 
+            [(ngModel)]="habitat.nom" 
+            name="nom" 
+            required
+        >
 
         <label for="description">Description:</label>
-        <input type="text" id="description" [(ngModel)]="habitat.description" name="description" required>
+        <input 
+            type="text" 
+            id="description" 
+            [(ngModel)]="habitat.description" 
+            name="description" 
+            required
+        >
 
         <label for="commentaire">Commentaire:</label>
-        <textarea id="commentaire" [(ngModel)]="habitat.commentaire_habitat" name="commentaire"></textarea>
+        <textarea 
+            id="commentaire" 
+            [(ngModel)]="habitat.commentaire_habitat" 
+            name="commentaire"
+        ></textarea>
 
         <label for="continent">Continent:</label>
-        <select id="continent" [(ngModel)]="habitat.continent_id" name="continent_id" required>
-            <option *ngFor="let continent of continents" [value]="continent.continent_id">{{ continent.nom }}</option>
+        <select 
+            id="continent" 
+            [(ngModel)]="habitat.continent_id" 
+            name="continent_id" 
+            required
+        >
+            <option 
+                *ngFor="let continent of continents" 
+                [value]="continent.continent_id"
+            >{{ continent.nom }}</option>
         </select>
 
         <label for="image">Sélectionner une image:</label>
-        <input type="file" (change)="onFileSelected($event)" name="image" id="image" accept="image/*" required>
+        <input 
+            type="file" 
+            (change)="onFileSelected($event)" 
+            name="image" 
+            id="image" 
+            accept="image/*" 
+            required
+        >
         <br>
 
         <button type="submit">Ajouter Habitat</button>
