@@ -1,1 +1,61 @@
-<p>services works!</p>
+<app-groupe-service></app-groupe-service>
+
+<!-- Permet d'ajouter un petit formulairee pour ajouter les cartes des services -->    
+<!-- <form (ngSubmit)="onSubmit()">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" [(ngModel)]="service.nom" name="nom" required><br><br>
+    
+    <label for="groupeService">groupeService:</label>
+    <select id="groupeService" [(ngModel)]="service.groupe_service_id" name="groupe_service_id" required>
+        <option 
+            *ngFor="let groupeService of groupeServices" 
+            [value]="groupeService.groupe_service_id"
+        >
+            {{ groupeService.nom }}
+        </option>
+    </select><br><br>
+    
+    <label for="description">Description:</label>
+    <input type="text" id="description" [(ngModel)]="service.description" name="description" required><br><br>
+
+   
+    <label for="image">Sélectionner une image:</label>
+    <input type="file" (change)="onFileSelected($event)" name="image" id="image" accept="image/*" required>
+    <br><br>
+    
+
+    <button type="submit">Ajouter service</button>
+</form> -->
+
+<div class="main">
+    <h1>Découvrez les services des animaux du Zoo</h1>
+    <div class="container">
+        <div 
+            *ngFor="let service of services"
+            class="tableauservices"
+        >
+            <div 
+                *ngIf="service.groupe_service_id === selectedGroupeServiceId" 
+                class="cardService"
+            >
+                <a class="image-text">
+                    <div class="image-container">
+                        <img 
+                        [src]="service.imageUrl" 
+                        [alt]="service.nom"
+                        [title]="'Service: ' + service.nom">
+                    </div>
+                    
+                </a>
+                <div class="detailsCards">                    
+                        <h1>{{ service.nom }}</h1>
+                        <p>
+                            {{ service.description }}
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  

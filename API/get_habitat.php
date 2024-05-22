@@ -15,10 +15,10 @@ try {
     unset($row); //
 
     if ($results === false) {
-        error_log('No continents found.');
+        error_log('Pas de continent trouvé.');
         echo json_encode([]);
     } else {
-        error_log('Fetched continents: ' . json_encode($results));
+        error_log('continent trouvé: ' . json_encode($results));
         echo json_encode($results);
     }
 } catch (PDOException $e) {
