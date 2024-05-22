@@ -24,7 +24,7 @@ export class ReviewsPostedComponent {
         this.avis = response;
       },
       (error) => {
-        console.error('Error fetching data:', error);
+        console.error('erreur récupération des avis postés:', error);
       }
     );
   }
