@@ -25,7 +25,7 @@ export class ServicesPostedComponent {
         this.services = response;
       },
       (error) => {
-        console.error('Error fetching data:', error);
+        console.error('erreur récupération des services postés:', error);
       }
     );
   }
