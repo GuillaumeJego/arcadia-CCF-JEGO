@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ContinentService } from '../../core/services/continent.service';
 import { ContinentModel } from '../../core/services/continent.model';
-import { MonoContinentComponent } from './mono-continent/mono-continent.component';
 import { SelectedContinentService } from '../../core/services/selected-continent.service';
 
 @Component({
@@ -12,7 +11,6 @@ import { SelectedContinentService } from '../../core/services/selected-continent
   imports: [
     CommonModule,
     FormsModule,
-    MonoContinentComponent
   ],
   templateUrl: './continents.component.html',
   styleUrls: ['./continents.component.scss']
