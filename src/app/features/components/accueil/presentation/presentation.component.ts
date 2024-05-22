@@ -25,7 +25,7 @@ export class PresentationComponent implements OnInit {
         this.descriptions = response;
       },
       (error) => {
-        console.error('Error fetching data:', error);
+        console.error('erreur récupération presentation:', error);
       }
     );
   }
