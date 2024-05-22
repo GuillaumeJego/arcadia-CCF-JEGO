@@ -1,11 +1,62 @@
 # Arcadia
 
-# cloner le repo sur votre disque local 
+# 1° Installer MAMP (si vous ne l'avez pas déjà)
+https://www.mamp.info/en/downloads/
+# vérifiez dans les préférences de MAMP que le serveur est bien coché sur Apache. 
+# Vérifiez que les ports sont les suivants : 
+# Apache Port: 8888
+# Nginx Port : 7888
+# MySQL Port : 8889
+# Démarrez le serveur MAMP : (Start)
 
-Commande cli : git clone https://github.com/GuillaumeJego/arcadia-CCF-JEGO.git
+# 2° Ouvrez un terminal et vous placer à la racine de htdocs
+# Sous Windows
+cd C:\MAMP\htdocs
+
+# 3° cloner le repo sur votre disque local 
+# Commande cli : 
+git clone https://github.com/GuillaumeJego/arcadia-CCF-JEGO.git
+# (Bien vous assurer de copier le dossier et le coller C:\MAMP\htdocs\phpMyAdminDossier à la racine de htdocs)
+
+# 4°  ouvrir le dossier tout juste cloné 
+# Dans le terminal, tapez la ligne d ecommande suivante : 
+cd .\arcadia-CCF-JEGO\
+
+# 5° Tapez la commande suivante pour déplacer le dossier à la racine de htdoc
+Move-Item -Path "C:\MAMP\htdocs\arcadia-CCF-JEGO\phpMyAdminDossier" -Destination "C:\MAMP\htdocs\phpMyAdminDossier"
+
+# Vous devriez toujours vous situer ici : 
+# C:\MAMP\htdocs\arcadia-CCF-JEGO>
+
+# 6° Maintenant taper la ligne de commande dans votre terminal pour installer les dépendances d'Angular 
+npm i 
+
+# 7° Taper maintenant ng serve pour lancer le serveur local 
+ng serve 
+
+# 8° Le terminal vous affichera le lien pour accédez à l'application en simulation web.
+# c'est généralement : 
+Local:   http://localhost:4200/
+
+
+# base de donnée : lien phpMyAdmin ; 
+http://localhost:8888/phpMyAdminDossier/
+
+# Nom utilisateur : 
+user1
+
+# mot de passe : 
+zUWr/KrCIKsGxpy9
+
+# retrouvez le fichier de ma maquette dans le'url de partage suivant 
+
+https://www.figma.com/design/lt4wjKEfR3M07G6Poodrkh/Arcadia?node-id=0-1&t=ZParXOfaKTyQvTWr-0
 
 
 
+
+Les éléments qui m'ont permis d'alimenter l'application se situe dans 
+htdocs\arcadia-CCF-JEGO\src\assets\Images
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
