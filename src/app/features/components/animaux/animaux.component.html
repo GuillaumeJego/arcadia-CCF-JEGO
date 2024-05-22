@@ -1,1 +1,81 @@
-<p>animaux works!</p>
+<!-- Permet d'ajouter un petit formulairee pour ajouter les cartes des animaux -->    
+    <form (ngSubmit)="onSubmit()">
+        <label for="prenom">Prenom:</label>
+        <input 
+            type="text" 
+            id="prenom" 
+            [(ngModel)]="animal.prenom" 
+            name="prenom" 
+            required
+        >
+
+        <label for="etat">Etat:</label>
+        <input 
+            type="text" 
+            id="etat" 
+            [(ngModel)]="animal.etat" 
+            name="etat" 
+            required
+        >
+
+        <label for="habitat">habitat:</label>
+        <select 
+            id="habitat" 
+            [(ngModel)]="animal.habitat_id" 
+            name="habitat_id" 
+            required
+        >
+            <option 
+                *ngFor="let habitat of habitats" 
+                [value]="habitat.habitat_id"
+            >{{ habitat.nom }}</option>
+        </select>
+
+        <label for="image">Sélectionner une image:</label>
+        <input 
+            type="file" 
+            (change)="onFileSelected($event)" 
+            name="image" 
+            id="image" 
+            accept="image/*" 
+            required
+        >
+        <br>
+
+        <button type="submit">Ajouter animal</button>
+    </form>
+
+
+
+<app-habitats></app-habitats>
+
+<div class="main">
+    <div class="container">
+        <div 
+            *ngFor="let animal of animaux"
+            class="tableauAnimaux"
+        >
+            <div 
+                *ngIf="animal.habitat_id === selectedHabitatId" 
+                class="cardAnimal"
+            >
+                <h1>{{ animal.prenom }}</h1>
+                <a class="image-text">
+                    <div class="image-container">
+                        <img 
+                            [src]="animal.imageUrl" 
+                            [alt]="animal.prenom"
+                            [title]="'Dernier commentaire: ' + animal.etat">
+                    </div>
+
+                </a>
+                <div class="detailsCards">                    
+                    <h2>Description : </h2>
+                    <p>
+                        {{ animal.etat }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

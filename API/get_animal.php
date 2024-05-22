@@ -3,7 +3,7 @@
 include __DIR__ . '\db_connexion.php';
 
 try {
-    $stmt = $pdo->query("SELECT `habitat_id`,`nom`,`description`,image,`commentaire_habitat`,`continent_id` FROM `habitat`");
+    $stmt = $pdo->query("SELECT `animal_id`,`prenom`,`etat`,`compteur`,image,`habitat_id` FROM `animal`");
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Encode l'image en bbase64
@@ -15,10 +15,10 @@ try {
     unset($row); //
 
     if ($results === false) {
-        error_log('Pas de continent trouvé.');
+        error_log('Pas d\animal trouvé.');
         echo json_encode([]);
     } else {
-        // error_log('continent trouvé: ' . json_encode($results));
+        error_log('animal trouvé: ' . json_encode($results));
         echo json_encode($results);
     }
 } catch (PDOException $e) {
